@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+ 
+  <style>
+    
+/* container-2 related*/
+*{ 
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+    height: 60vh;
+}
+.signupcontainer{
+    background: rgba(73, 70, 69, 0.8);
+    padding: 30px 10px;
+  
+
+  border-radius: 40px;
+    box-shadow: 0 0 20px;
+    height:510px;
+    width: 490px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+ opacity: 5px;
+}
+.signuplabel{
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .emailsignup {
+    margin-right: 1.85rem;
+}
+.passwordsignup {
+    margin-right: 0.72rem;
+}
+.numbersignup {
+    margin-right: 1.3rem;
+    
+}
+.button{
+    padding-left: 30px;
+      padding-right: 30px;
+     margin-left: 40%;
+     align-items: center;
+    margin-top: -20px;
+     border-radius: 10px;
+     border: none;
+     background-color: green;
+  }
+  .loginbutton{
+    margin-top: -30px;
+    text-align: center;
+  }
+  .loginlink{
+    text-align: center;
+    margin-left: -20px;
+    color: rgb(216, 62, 216);
+  }
+  .body{
+  background-image: url("https://images2.alphacoders.com/935/935990.jpg");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  margin: 0;
+  padding:0;
+}
+  
+  
+  </style>
+
+</head>
+<body class ="body">
+  <div class="container-2">
+  
+  <form action="/signupsubmit" method="POST">
+   <div class="signupcontainer">
+    <h1 class="signuplabel">Signup</h1>
+    <div>
+    <label for="fullname" class ="fullnamesignup">Full Name:</label>
+    <input type="text" id="fullname" name="fullname"  placeholder="Enter Full Name" required>
+    </div>
+
+    <div>
+    <label for="email" class ="emailsignup">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="Enter E-Mail" required>
+    </div>
+
+    <div>
+    <label for="password" class ="passwordsignup">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+    </div>
+
+    <div>
+    <label for="number" class ="numbersignup">Number:</label>
+    <input type="number" id="number" name="number" placeholder="Enter Number" required>
+    </div>
+
+    <div>
+    <input type="submit" onclick="button" class="button" value="Sign Up">
+    </div>
+    <div class="loginbutton">
+    <span>Already have an account?</span><span class="loginlink"onclick="window.location.href='/login'">Login</span>
+    </div>
+  </div>
+    </form> 
+    </div>
+    </body>
+    </html>

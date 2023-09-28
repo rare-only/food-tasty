@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300&family=Sassy+Frass&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*  -------navigation bar -----------  */
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+  padding-bottom: 10px;
+  position: sticky;
+}
+
+.menus {
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  margin: 0px 10px;
+}
+
+.menus:hover,
+.active {
+  border-bottom: 2px solid black;
+  transition: all, 0.2sec;
+}
+.menu {
+  display: none;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/*  ------- section one -----------  */
+.section-one {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 40px;
+  padding: 10px 0px;
+  padding-bottom: 100px;
+}
+.discount {
+  background-color: #149f39;
+  color: white;
+  font-size: 20px;
+  justify-self: flex-start;
+  padding: 10px 45px;
+  margin-top: 60px;
+  display: inline-block;
+}
+
+.section-heading {
+  font-size: 52px;
+  font-weight: 100;
+  font-style: normal;
+  padding: 20px 0px;
+  font-family: "Sassy Frass", cursive;
+}
+
+.button {
+  background-color: rgba(255, 192, 102, 1);
+  color: white;
+  padding: 10px 30px;
+  margin-top: 15px;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: rgb(255, 150, 4);
+  cursor: pointer;
+
+  border-radius: 23px;
+}
+
+.section-one-icons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.s-one {
+  display: flex;
+  gap: 20px;
+}
+.s-two {
+  display: flex;
+  gap: 20px;
+}
+.s-three {
+  display: flex;
+  gap: 20px;
+}
+
+.left-btn-slide {
+  position: absolute;
+  top: 370px;
+  left: 30px;
+  background: transparent;
+  border: none;
+}
+
+.left-btn-slide i,
+.right-btn-slide i {
+  font-size: 45px;
+}
+.right-btn-slide {
+  position: absolute;
+  top: 370px;
+  right: 30px;
+  background: transparent;
+  border: none;
+}
+
+
+#section-1-main-img {
+  border-radius: 23px;
+  width: 500px;
+  height: 339px;
+  margin-top: 78px;
+  margin-left: 150px;
+  box-shadow: 0 0  20px;
+}
+
+/* ---------- section two ------------ */
+
+.section-2 {
+  padding-top: 50px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s2-button-1 {
+  width: 180px;
+  padding: 3px 28px;
+
+  background-color: #149f39;
+  color: white;
+  font-size: 25px;
+}
+
+.s2-button-tag {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+  width: 300px;
+}
+
+.conatiner-s2 {
+  display: flex;
+  justify-content: center;
+}
+
+.image-galary {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 0.5fr);
+  grid-template-columns: repeat(auto-fit, 0.5fr);
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 100px;
+}
+.item-1 img, .item-2 img,.image-3 img,.image-4 img,.image-5 img,.image-5 img,.image-7 img{
+  transition: transform 0.3s ease;
+}
+.item-1:hover img ,.item-2:hover img,.item-3:hover img,.item-4:hover img,.item-5:hover img,.item-6:hover img, .item-7:hover img{
+  transform: scale(0.95);
+  border-radius: 29px;
+}
+
+.item-1 {
+  
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  
+}
+
+.item-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.item-4 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.item-5 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.item-6 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.item-7 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+/* ------------ footer ------------ */
+
+.footer {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  padding: 100px 0px;
+  background-color: rgba(255, 240, 219, 1);
+}
+
+.footer-nav {
+  list-style-type: none;
+}
+
+#list-heading {
+  color: gray;
+  font-size: 20px;
+  font-weight: 550;
+  padding: 15px 0px;
+}
+
+#input-text-bar {
+  width: 250px;
+  padding: 2px 10px;
+}
+
+#social-media-icons {
+  font-size: 40px;
+  margin: 5px;
+  padding-bottom: 20px;
+}
+
+.fa-youtube:hover {
+color: red;
+}
+
+.fa-facebook-f:hover{
+color: #1877f2;
+
+}
+.fa-twitter:hover{ 
+color: #1da1f2;
+}
+.fa-instagram:hover{
+color: #c32aa3;
+}
+.fa-youtube,.fa-instagram,.fa-twitter,.fa-facebook-f{
+
+  transition: transform 0.3s ease;
+}
+.fa-youtube:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-facebook-f:hover{
+  transform: scale(1.25);
+}
+
+.a-logo {
+  text-decoration: none;
+  color: silver;
+  
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  /*----- navbar----*/
+
+  .navbar {
+    padding-right: 20px;
+  }
+
+  .icon {
+    margin-left: -40px;
+  }
+
+  /*----- sectioon 1----*/
+
+  .section-one {
+    gap: 100px;
+  }
+
+  .main-image img {
+    width: 400px;
+    height: auto;
+    position: relative;
+    top: 40px;
+    left: 30px;
+  }
+
+  .discount {
+    font-size: 18px;
+  }
+
+  .section-heading {
+    font-size: 45px;
+  }
+
+  .section-one-matter p {
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .button {
+    font-size: 20px;
+    padding: 8px 25px;
+  }
+  .section-one-icons {
+    padding: 0px 5px 0px 1px;
+  }
+  .s-one {
+    padding-top: 18px;
+  }
+  .s-one img {
+    object-fit: contain;
+  }
+
+  .s-two img {
+    object-fit: contain;
+  }
+
+  .s-three img {
+    object-fit: contain;
+  }
+
+  .section-one-icons p {
+    font-size: 13px;
+  }
+}
+
+    </style>
+    <script
+      src="https://kit.fontawesome.com/73b90f610a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav>
+      <ul class="navbar">
+        <li class="icon">
+          <img
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/logo.png"
+            alt="logo"
+          />
+        </li>
+        <span class="menu-bar">
+        <span class="menus active">home</span>
+        <span class="menus"><a  href="#section-two" class="link" >items</a></span>
+        <span class="menus">help</span>
+        <span class="menus" id="menu-contact-btn">contact us</span>
+        </li>
+        <div class="menu">
+          <li class="menu-icon"><i class="fa-solid fa-bars"></i></li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- section one -->
+   
+    
+  <!-- image slider--->
+      <div class="section-one">
+        <button class="left-btn-slide" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="right-btn-slide" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+        
+        <div class="main-image">
+          <img id="section-1-main-img"
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/hero_image.png"
+            alt="food-image" />
+        </div>
+      <div class="section-one-matter">
+        <div class="discount">50 % OFF All Products</div>
+        <div class="section-heading">
+          <h3>
+             <br />
+          
+          </h3>
+        </div>
+        <div>
+          <p>
+           
+           </p>
+           <p>
+           
+          </p>
+        </div>
+        <div class="button">Explore Now</div>
+      </div>
+    </div>
+
+    <div class="section-one-icons">
+      <div class="s-one">
+        <img
+        src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/icons/discount.png"
+        alt="discount-tag"
+      />
+      <div>
+        <h4>Discount Voucher</h4>
+        <p>
+         Grab the food on Special_sale Now. <br />
+          Every thing is at 50% OFF.
+        </p>
+      </div>
+      </div>
+
+      <div class="s-two">
+        <img
+          src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/icons/fresh.png"
+          alt="discount-tag"
+        />
+        <div>
+          <h4>Fresh Healthy Food</h4>
+          <p>
+            Made with MAMA's love ,Get ready<br />
+           Feel's like Mom's cooked it. 
+          </p>
+        </div>
+      </div>
+
+      <div class="s-three">
+        <img
+          src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/icons/delivery.png"
+          alt="discount-tag"
+        />
+        <div>
+          <h4>Fast Home Delivery</h4>
+          <p>
+            Delivering flavours at the speed of craving <br />
+            Hurry Now,
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- section two -->
+    <div class="section-two" id="section-two">
+     
+      <div class="section-2">
+        <div class="s2-button-1">Our Menu</div>
+        <div class="s2-button-tag">Explore Our Menu</div>
+      </div>
+
+     
+     
+      <div class="conatiner-s2">
+
+
+      <div class="image-galary">
+
+        <div class="item-1">
+          <a href="/path-to/item1" id="item-1" target="_blank"> 
+              <img
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image1.png"
+            alt="" />
+          </a>
+       
+        </div>
+
+        <div class="item-2">
+          <a href="/path-to/item2" id="item-2"  target="_blank">
+          <img src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image2.png"
+            alt="" />
+          </a>
+        </div >
+
+        <div class="item-3">
+          <a href="path-to/item3" id="item-3"  target="_blank">
+            <img src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image7.png"
+            alt="http://127.0.0.1:5500/hotel%20website/item1.html" />
+        </a>
+        </div>
+
+        <div class="item-4">
+          <a href="path-to/item4" id="item-4"  target="_blank">
+          <img
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image4.png"
+            alt=""
+          /> </a>
+          </div>
+
+          <div class="item-5">
+            <a href="path-to/item5"id="item-5"  target="_blank">
+          <img
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image5.png"
+            alt=""
+          /> </a>
+          </div>
+
+          <div class="item-6">
+            <a href="path-to/item6"id="item-6"  target="_blank">
+          <img
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image6.png"
+            alt=""
+          /> </a>
+        </div>
+
+        <div class="item-7">
+          <a href="path-to/item7"id="item-7"  target="_blank">
+          <img
+            src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/grid_image3.png"
+            alt=""
+          /> </a>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+    
+    <hr />
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer-logo">
+        <img 
+          src="https://raw.githubusercontent.com/anshuopinion/10-Practice-Project-Html-CSS/Project-5-Restaurant-Website/Project%205/images/logo.png"
+          alt=""
+        />
+      </div>
+
+      <ul class="footer-nav">
+        <li id="list-heading">Main Link</li>
+        <li>Order Tracking</li>
+        <li>New Order</li>
+        <li>Contact Us</li>
+        <li>News & Blogs</li>
+      </ul>
+
+      <ul class="footer-nav">
+        <li id="list-heading">Support</li>
+        <li>About Us</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+      </ul>
+
+      <ul class="footer-nav">
+        <li id="list-heading">Join Our Newsletter</li>
+        <li>
+          <input
+            id="input-text-bar"
+            type="text"
+            placeholder="Enter your Email address"
+          />
+        </li>
+        <li id="list-heading">Follow Us</li>
+        <li>
+          <a href="https://www.facebook.com/login/" target="_self"  class="a-logo"><i id="social-media-icons" class="fa-brands fa-facebook-f" ></i></a>
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" target="_self"  class="a-logo"><i id="social-media-icons" class="fa-brands fa-twitter"> </i></a>
+          <a href="https://www.instagram.com/accounts/login/?hl=en" target="_self"  class="a-logo"><i id="social-media-icons" class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/account" target="_self"  class="a-logo"><i id="social-media-icons" class="fa-brands fa-youtube"></i></a>
+          
+          
+        </li>
+        <li>News & Blogs</li>
+      </ul>
+    </div>
+
+
+
+
+    
+
+    <script src="https://kit.fontawesome.com/73b90f610a.js" crossorigin="anonymous"></script>
+    <script >
+// Get references to the image and buttons
+const mainImage = document.getElementById("section-1-main-img");
+const leftButton = document.querySelector(".left-btn-slide");
+const rightButton = document.querySelector(".right-btn-slide");
+
+// Define the array of image URLs
+const imageUrls = [
+"https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?w=900&t=st=1692463422~exp=1692464022~hmac=665d1746223d538716d52b828500db5c301f00f8430218158c94bb3a62030c09",
+
+"https://img.freepik.com/free-psd/food-menu-restaurant-web-banner-template_120329-1460.jpg?w=996&t=st=1692463118~exp=1692463718~hmac=a2129328112156143709531ecd81aee5ebff84e737560aeac866f55ff02969c1",
+
+"https://img.freepik.com/free-psd/food-menu-restaurant-web-banner-template_106176-812.jpg?w=1060&t=st=1692463264~exp=1692463864~hmac=52fddd16652e8595848a7a5d278e63ed8f21da687256f2b9522b8b550707880b",
+
+"https://img.freepik.com/premium-psd/healthy-food-menu-promotion-social-media-facebook-cover-banner-template_354609-110.jpg?w=1380",
+// Add more image URLs here
+];
+
+const textContents = [
+{
+discount: "50 % OFF All Products",
+heading: "Paneer Butter Masala.\nYummy, Hurry now",
+paragraph1: "Indulge in the rich flavors of our Paneer Butter Masala. Made with the finest ingredients.",
+paragraph2: "it's a true delight for your taste buds.",
+paragraph3: "Savor the creamy texture and aromatic spices that make this dish a favorite among food enthusiasts.",
+},
+{
+discount: "Special Offer: Free Dessert!",
+heading: "ExquisiteTaste,\nExtreme happiness",
+paragraph1:"Treat yourself to an extraordinary dining experience with our exquisite menu.",
+paragraph2:"Get a complimentary dessert with every main course!",
+paragraph3: "Explore the harmonious blend of flavors that will take you on a culinary journey like no other.",
+
+},
+{
+discount: "Try Our New Seasonal Dishes",
+heading: "Seasonal Delights,\nAwaiting for  You",
+paragraph1: "Experience the magic of seasonal ingredients in our new dishes",
+paragraph2: "From refreshing summer salads to comforting winter stews, we've got it all.",
+paragraph3: "Embark on a gastronomic adventure as we bring you the freshest and most delicious dishes of the season.",
+},
+{
+discount: "Exclusive Offer: 15% Off!",
+heading: "Discover Culinary Excellence\nwith Our Egg Salad Creation",
+paragraph1: "Embark on a gastronomic journey like no other as you savor the refined flavors of our meticulously crafted egg salad.",
+paragraph2: "Indulge in a harmonious blend of textures and aromas, carefully composed from the freshest ingredients.",
+paragraph3: "Experience a symphony of taste and nutrition that exemplifies our commitment to culinary perfection.",
+},
+
+
+];
+
+function updateContent(index) {
+const content = textContents[index];
+const discountElement = document.querySelector(".discount");
+const headingElement = document.querySelector(".section-heading h3");
+const paragraphs = document.querySelectorAll(".section-one-matter p");
+
+discountElement.textContent = content.discount;
+headingElement.textContent = content.heading;
+paragraphs[0].textContent = content.paragraph1;
+paragraphs[1].textContent = content.paragraph2;
+paragraphs[2].textContent = content.paragraph3;
+}
+
+let currentImageIndex = 0;
+
+function updateImage() {
+mainImage.src = imageUrls[currentImageIndex];
+}
+
+function slide(direction) {
+if (direction === "left") {
+currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
+} else {
+currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+}
+updateImage(); // Update the image
+updateContent(currentImageIndex); // Update the text content
+}
+
+leftButton.addEventListener("click", () => slide("left"));
+rightButton.addEventListener("click", () => slide("right"));
+
+// Initial image update
+updateImage();
+updateContent(currentImageIndex);
+
+
+// Get references to the image elements
+const itemImages = document.querySelectorAll(".image-galary img");
+
+const itemPaths = [
+"views/item1.ejs", 
+"views/item2.ejs", 
+"views/item3.ejs", 
+"views/item4.ejs",
+"views/item5.ejs",
+"views/item6.ejs",
+"views/item7.ejs"
+
+
+
+];
+
+
+
+
+// Create a function to open item in a new tab using iframe
+function openItemInNewTab(itemUrl) {
+// Create a new tab
+const newTab = window.open();
+
+// Create an iframe and set its content
+const iframe = document.createElement('iframe');
+iframe.src = itemUrl;
+
+// Append the iframe to the new tab's document
+newTab.document.body.appendChild(iframe);
+}
+
+// Attach click event listeners to each item link
+document.getElementById('item1').addEventListener('click', function() {
+openItemInNewTab('/path-to/item1'); // Replace with the actual URL
+});
+
+document.getElementById('item2').addEventListener('click', function() {
+openItemInNewTab('/path-to/item2'); // Replace with the actual URL
+});
+document.getElementById('item3').addEventListener('click', function() {
+openItemInNewTab('/path-to/item3'); // Replace with the actual URL
+});
+document.getElementById('item4').addEventListener('click', function() {
+openItemInNewTab('/path-to/item4'); // Replace with the actual URL
+});
+document.getElementById('item5').addEventListener('click', function() {
+openItemInNewTab('/path-to/item5'); // Replace with the actual URL
+});
+document.getElementById('item6').addEventListener('click', function() {
+openItemInNewTab('/path-to/item6'); // Replace with the actual URL
+});
+document.getElementById('item7').addEventListener('click', function() {
+openItemInNewTab('/path-to/item7'); // Replace with the actual URL
+});
+
+
+
+const itemLinks = document.querySelectorAll('.item-link');
+itemLinks.forEach(itemLink => {
+itemLink.addEventListener('click', function() {
+const itemUrl = itemLink.dataset.url;
+openItemInNewTab(itemUrl);
+});
+});
+</script>
+    
+   
+  </body>
+</html>

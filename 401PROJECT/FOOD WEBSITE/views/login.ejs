@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  
+  <style>
+    
+    *{ 
+      font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* .container-1,.logincontainer,.loginlabel ,.email,.email-1,.password-1 ,.button,.signupbutton,.signuplink {
+  padding: 10px;
+    margin: 10px;
+} */
+
+.container-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.logincontainer{
+    padding: 10px 5px;
+    background: rgba(73, 70, 69, 0.8);
+/*background: linear-gradient(162deg, rgb(63, 52, 70) 0%, rgba(253,29,29,1) 50%, rgba(239,252,69,1) 100%);*/
+  border-radius: 40px;
+    box-shadow: 0 0 20px;
+    height:auto;
+    width:auto;
+    margin-top: 80px;
+}
+
+.loginlabel{
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.email {
+    margin-right: 1.8rem;
+    margin-top: -50px;
+}
+.email-1 {
+    margin-top: -20px;
+}
+.password-1 
+{margin: 0;
+    margin-top: -50px
+}
+
+.button{
+    padding-left: 30px;
+    padding-right: 30px;
+   margin-left: 38%;
+   border-radius: 10px;
+   margin-top: -20px;
+   border: none;
+   background-color: green;
+    
+}
+.signupbutton{
+  margin-top: -20px;
+ text-align: center;
+
+}
+.signuplink{
+   margin-left: -20px;
+    text-align: center;
+    margin-left: -20px;
+    color: rgb(47, 10, 234);
+}
+.body{
+background-image: url("https://images.alphacoders.com/987/987868.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+   <body class="body">
+ <div class="container-1">
+  <div class="logincontainer">
+  <h1 class="loginlabel">Login</h1>
+  <form action="/loginsubmit" method="POST">
+  <div class="email-1">
+    <label for="email" class="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder=" Enter E-Mail" required>
+  </div>
+
+  <div calss="password-1">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder=" Enter Password" required>
+  </div>
+
+  <div>
+    <input type="submit" onclick="button" class="button" value="Login">
+  </div>
+
+  <div class="signupbutton">
+    <span>Don't have an account ?</span><span class="signuplink"onclick="window.location.href='/signup'">Signup</span>
+  </div>
+
+  </form>
+ </div>
+</div>
+</body>
+</html>

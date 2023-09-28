@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu page</title>
+    <style>
+        /* for hotel-website.css*/
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300&family=Sassy+Frass&display=swap");
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+    
+    /*  -------navigation bar -----------  */
+    .navbar {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 100px;
+      padding-bottom: 10px;
+      position: sticky;
+    }
+    
+    .menus {
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 3px 15px;
+      margin: 0px 10px;
+    }
+    
+    .menus:hover,
+    .active {
+      border-bottom: 2px solid black;
+      transition: all, 0.2sec;
+    }
+    .menu {
+      display: none;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    
+    .link {
+      text-decoration: none;
+    }
+    
+    /*  ------- section one -----------  */
+    .section-one {
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+      margin-top: 40px;
+      padding: 10px 0px;
+      padding-bottom: 100px;
+    }
+    .discount {
+      background-color: #149f39;
+      color: white;
+      font-size: 20px;
+      justify-self: flex-start;
+      padding: 10px 45px;
+      margin-top: 60px;
+      display: inline-block;
+    }
+    
+    .section-heading {
+      font-size: 52px;
+      font-weight: 100;
+      font-style: normal;
+      padding: 20px 0px;
+      font-family: "Sassy Frass", cursive;
+    }
+    
+    .button {
+      background-color: rgba(255, 192, 102, 1);
+      color: white;
+      padding: 10px 30px;
+      margin-top: 15px;
+      font-size: 25px;
+      display: inline-block;
+    }
+    
+    .button:hover {
+      background-color: rgb(255, 150, 4);
+      cursor: pointer;
+    
+      border-radius: 23px;
+    }
+    
+    .section-one-icons {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 60px;
+    }
+    
+    .s-one {
+      display: flex;
+      gap: 20px;
+    }
+    .s-two {
+      display: flex;
+      gap: 20px;
+    }
+    .s-three {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .left-btn-slide {
+      position: absolute;
+      top: 370px;
+      left: 30px;
+      background: transparent;
+      border: none;
+    }
+    
+    .left-btn-slide i,
+    .right-btn-slide i {
+      font-size: 45px;
+    }
+    .right-btn-slide {
+      position: absolute;
+      top: 370px;
+      right: 30px;
+      background: transparent;
+      border: none;
+    }
+    
+    
+    #section-1-main-img {
+      border-radius: 23px;
+      width: 500px;
+      height: 339px;
+      margin-top: 78px;
+      margin-left: 150px;
+      box-shadow: 0 0  20px;
+    }
+    
+    /* ---------- section two ------------ */
+    
+    .section-2 {
+      padding-top: 50px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .s2-button-1 {
+      width: 180px;
+      padding: 3px 28px;
+    
+      background-color: #149f39;
+      color: white;
+      font-size: 25px;
+    }
+    
+    .s2-button-tag {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 25px;
+      width: 300px;
+    }
+    
+    .conatiner-s2 {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .image-galary {
+      display: grid;
+      grid-template-rows: repeat(auto-fit, 0.5fr);
+      grid-template-columns: repeat(auto-fit, 0.5fr);
+      grid-gap: 10px;
+      align-items: center;
+      justify-items: center;
+      padding-bottom: 100px;
+    }
+    .item-1 img, .item-2 img,.image-3 img,.image-4 img,.image-5 img,.image-5 img,.image-7 img{
+      transition: transform 0.3s ease;
+    }
+    .item-1:hover img ,.item-2:hover img,.item-3:hover img,.item-4:hover img,.item-5:hover img,.item-6:hover img, .item-7:hover img{
+      transform: scale(0.95);
+      border-radius: 20px;
+    }
+    
+    .item-1 {
+      
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    
+    .item-2 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      
+    }
+    
+    .item-3 {
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+    
+    .item-4 {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    
+    .item-5 {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    
+    .item-6 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+    
+    .item-7 {
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+    
+    /* ------------ footer ------------ */
+    
+    .footer {
+      display: flex;
+      gap: 80px;
+      justify-content: center;
+      padding: 100px 0px;
+      background-color: rgba(255, 240, 219, 1);
+    }
+    
+    .footer-nav {
+      list-style-type: none;
+    }
+    
+    #list-heading {
+      color: gray;
+      font-size: 20px;
+      font-weight: 550;
+      padding: 15px 0px;
+    }
+    
+    #input-text-bar {
+      width: 250px;
+      padding: 2px 10px;
+    }
+    
+    #social-media-icons {
+      font-size: 40px;
+      margin: 5px;
+      padding-bottom: 20px;
+    }
+    
+    @media screen and (max-width: 992px) {
+      /*----- navbar----*/
+    
+      .navbar {
+        padding-right: 20px;
+      }
+    
+      .icon {
+        margin-left: -40px;
+      }
+    
+      /*----- sectioon 1----*/
+    
+      .section-one {
+        gap: 100px;
+      }
+    
+      .main-image img {
+        width: 400px;
+        height: auto;
+        position: relative;
+        top: 40px;
+        left: 30px;
+      }
+    
+      .discount {
+        font-size: 18px;
+      }
+    
+      .section-heading {
+        font-size: 45px;
+      }
+    
+      .section-one-matter p {
+        font-size: 15px;
+        display: inline-block;
+      }
+    
+      .button {
+        font-size: 20px;
+        padding: 8px 25px;
+      }
+      .section-one-icons {
+        padding: 0px 5px 0px 1px;
+      }
+      .s-one {
+        padding-top: 18px;
+      }
+      .s-one img {
+        object-fit: contain;
+      }
+    
+      .s-two img {
+        object-fit: contain;
+      }
+    
+      .s-three img {
+        object-fit: contain;
+      }
+    
+      .section-one-icons p {
+        font-size: 13px;
+      }
+    }
+    
+    
+         /* for items.css*/
+         #section-1-main-img {
+        margin-top: 60px;
+        margin-right: 25px;
+        width: 612px;
+        height: 408px;
+    }
+    
+    .left-btn-slide {
+        top:290px;
+        left:55px;
+      }
+      
+      .left-btn-slide  i,.right-btn-slide i{
+        font-size: 45px;
+      }
+      .right-btn-slide {
+        top: 290px;;
+        right:690px;
+      }
+      
+      .left-btn-slide ,.right-btn-slide {
+        background:transparent;
+        border: none;
+      }
+    
+      
+    .button {
+        margin-top: 30px;
+    }
+    .section_2{
+        display: flex;
+        margin: 0 10rem 0 18rem;
+    }
+    .section_2, .btn-add ,.btn-sub{
+        padding: 7px 10px;
+        border-radius:7px;
+        border: none;
+        font-size: 1rem;
+    }
+    
+    .btn-add i,.btn-sub i {
+        font-size: 2rem;
+        color: black;
+    }
+    .btn-add i:hover {
+        color:#000000b9  ;
+    }
+    .btn-sub i:hover {
+        color:#000000b9 ;
+    }
+    
+    .quantity {
+        width: 9rem;
+        margin: 0 2rem;
+        padding-left: 4.2rem;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    
+    .buy,.cart {
+        width: 25rem;
+        font-size: 1.8rem;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        border: none;
+        border-radius: 10px;
+        margin: 0 0 0 21rem;
+        padding: 5px 5px;
+    }
+    
+    .cart {
+        margin: 0 0 0 2rem;
+    
+    }
+       </style>
+    <script src="https://kit.fontawesome.com/73b90f610a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- section one -->
+    <div class="section-one">
+        <!-- side image slider -->
+        <button class="left-btn-slide" type="button"><i class="fa-solid fa-chevron-right fa-rotate-180"></i></button>
+        <button class="right-btn-slide" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+        <!--  -->
+        <div class="main-image">
+            <img id="section-1-main-img"
+                src="https://media.istockphoto.com/id/1158623408/photo/indian-hindu-veg-thali-food-platter-selective-focus.jpg?b=1&s=612x612&w=0&k=20&c=1AJ_DbtX-tJZsdh8ujrvg5Q7Xl2BWi1wL7pkVSxv0LQ="
+                alt="food-image"
+            />
+        </div>
+        <div class="section-one-matter">
+            <div class="discount">50 % OFF All Products</div>
+            <div class="section-heading">
+                <h3>
+                    Enjoy Your <br />
+                    Delicious Food
+                </h3>
+            </div>
+            <div>
+                <p>
+                    Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                </p>
+                <p>
+                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                </p>
+            </div>
+            <div class="button">Explore Now</div>
+        </div>
+    </div>
+    <div class="section_2">
+      <button class="btn-add" id="btn-add"><i class="fa-solid fa-plus"></i></button>
+      <input class="quantity" type="number" placedholder="Quantity" value="0">
+      <button class="btn-sub" id="btn-sub"><i class="fa-solid fa-minus"></i></button>
+      <button class="buy">Buy</button>
+      <button class="cart">Cart</button>
+  </div>
+  <script > 
+    const quantityInput = document.querySelector(".quantity");
+      const addButton = document.getElementById("btn-add");
+      const subButton = document.getElementById("btn-sub");
+    
+      let currentQuantity = 0;
+      const step = 1; // Change this value to set the desired step for incrementing
+    
+      addButton.addEventListener("click", () => {
+          currentQuantity += step;
+          quantityInput.value = currentQuantity;
+          subButton.disabled = false; // Enable the sub button
+      });
+    
+      subButton.addEventListener("click", () => {
+          if (currentQuantity > 0) {
+              currentQuantity -= step;
+              quantityInput.value = currentQuantity;
+          }
+          if (currentQuantity === 0) {
+              subButton.disabled = true; // Disable the sub button at zero quantity
+          }
+      });
+    
+    // Get references to the image and buttons
+    const mainImage = document.getElementById("section-1-main-img");
+    const leftButton = document.querySelector(".left-btn-slide");
+    const rightButton = document.querySelector(".right-btn-slide");
+    
+    // Define the array of image URLs
+    const imageUrls = [
+    "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
+    
+    "https://insanelygoodrecipes.com/wp-content/uploads/2021/07/Lentil-Salad-with-Cherry-Tomatoes-and-Onions.jpg",
+    
+    "https://www.foodandwine.com/thmb/WdGjQ9ZnwmZZxZhXclKtAfpni4Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/201007-xl-summer-chopped-salad-2000-48a2850c562d452daea685811475fad1.jpg",
+    
+    "https://www.twopeasandtheirpod.com/wp-content/uploads/2021/10/Easy-Spinach-Salad-8-1.jpg",
+    // Add more image URLs here
+    ];
+    
+    const textContents = [
+    {
+    discount: "50 % OFF All Products",
+    heading: " Yummy Dish,\n Hurry now",
+    paragraph1: "Indulge in the rich flavors of our salads. Made with the finest ingredients.",
+    paragraph2: "it's a true delight for your taste buds.",
+    paragraph3: "Savor the creamy texture and aromatic spices that make this dish a favorite among food enthusiasts.",
+    },
+    {
+    discount: "Special Offer: Free Gift's!",
+    heading: "ExquisiteTaste,\nExtraordinary,\nExperience",
+    paragraph1:"Treat yourself to an extraordinary dining experience with our exquisite menu.",
+    paragraph2:"Get a complimentary dessert with every main course!",
+    paragraph3: "Explore the harmonious blend of flavors that will take you on a culinary journey like no other.",
+    
+    },
+    {
+    discount:   "Try Our New Seasonal Dishes",
+    heading:    "Seasonal Delights\n Awaiting for  You",
+    paragraph1: "Experience the magic of seasonal ingredients in our new dishes",
+    paragraph2: "From refreshing summer salads to comforting winter stews, we've got it all.",
+    paragraph3: "Embark on a gastronomic adventure as we bring you the freshest and most delicious dishes of the season.",
+    },
+    {
+    discount: "Exclusive Offer: 15% Off!",
+    heading: "Discover Culinary Excellence\nwith Our  Salad Creation",
+    paragraph1: "Embark on a gastronomic journey like no other as you savor the refined flavors of our meticulously crafted veg salad.",
+    paragraph2: "Indulge in a harmonious blend of textures and aromas, carefully composed from the freshest ingredients.",
+    paragraph3: "Experience a symphony of taste and nutrition that exemplifies our commitment to culinary perfection.",
+    },
+    
+    // Add more text content objects here
+    ];
+    
+    function updateContent(index) {
+    const content = textContents[index];
+    const discountElement = document.querySelector(".discount");
+    const headingElement = document.querySelector(".section-heading h3");
+    const paragraphs = document.querySelectorAll(".section-one-matter p");
+    
+    discountElement.textContent = content.discount;
+    headingElement.textContent = content.heading;
+    paragraphs[0].textContent = content.paragraph1;
+    paragraphs[1].textContent = content.paragraph2;
+    paragraphs[2].textContent = content.paragraph3;
+    }
+    
+    let currentImageIndex = 0;
+    
+    function updateImage() {
+    mainImage.src = imageUrls[currentImageIndex];
+    }
+    
+    function slide(direction) {
+    if (direction === "left") {
+    currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
+    } else {
+    currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+    }
+    updateImage(); // Update the image
+    updateContent(currentImageIndex); // Update the text content
+    }
+    
+    leftButton.addEventListener("click", () => slide("left"));
+    rightButton.addEventListener("click", () => slide("right"));
+    
+    // Initial image update
+    updateImage();
+    updateContent(currentImageIndex);
+    
+    
+    </script>
+</body>
+</html>
